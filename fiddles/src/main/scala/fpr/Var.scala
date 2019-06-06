@@ -1,7 +1,7 @@
 package fpr
 
 class Var[T](expr: => T) extends Signal[T](expr) {
-  def update(expr: => T): Unit = ???
+  override def update(expr: => T): Unit = super.update(expr)
 }
 
 object Var {
